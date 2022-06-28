@@ -51,7 +51,7 @@ export default ContScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#7e9cc4",
 
   },
   button:{

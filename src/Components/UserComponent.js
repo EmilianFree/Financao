@@ -11,10 +11,11 @@ return (
     <View style={[styles.card,userselected == index ? styles.cardoutline : styles.cardnotoutline]}>
       <Text style={styles.prenom}>{item.user.split(' ')[0]}</Text>
       <Text style={styles.nom}>{item.user.split(' ')[1]}</Text>
+      <Text style={styles.text}>Solde</Text>
       <Text style={Number(revenu) < 0 ? styles.soldenegative : styles.solde}>{(Number(revenu).toFixed(2)).toLocaleString('fr-FR', {style: 'currency',
   currency: 'EUR',
 })}</Text>
-      <Text>Solde</Text>
+      
      
     </View>
                    
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#e6f1ff',
-    margin: 10,
+    margin: 7,
     padding: 10,
     borderRadius: 10,
     shadowColor: '#000',
@@ -41,14 +42,15 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 1,
     height: 100,
-    width:150
+    width:120,
+    backgroundColor: '#d5e4e8',
   },
   cardoutline:{
     borderWidth:2,
-    borderColor:'blue',
+    borderColor:'green',
   },
   cardnooutline:{
-    borderWidth:0,
+    borderWidth:1,
     borderColor:'blue',
   },
   solde: {
@@ -58,16 +60,20 @@ const styles = StyleSheet.create({
   },
   soldenegative: {
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 18,
     color: 'red',
   },
   prenom: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#000',
   },
   nom : {
-    fontSize: 20,
+    fontSize: 19,
     fontWeight: 'bold',
+    color: '#000',
+  },
+  text : {
+    fontSize: 14,
     color: '#000',
   }
 
